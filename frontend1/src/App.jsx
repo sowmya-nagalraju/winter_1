@@ -2,11 +2,14 @@ import React from 'react'
 import Students from './components/Students'
 import {Button} from '@/components/ui/button'
 import Count from './hooks/Count'
+import Register from './hooks/Register'
+import Users from './hooks/Users'
 const App = () => {
   let name = "test"
   return (
     <>
         <div classname="p1-96">App</div>
+        <Register/>
         <Count/>
         <Button variant="destructive">Delete</Button>
         <Button variant="outline">outline</Button>
@@ -18,6 +21,7 @@ const App = () => {
         <h3>3</h3>
         </div>
         <h1>This is {name}</h1>
+        <Users/>
 
         <Students name="user" age={20}/>
     </>
