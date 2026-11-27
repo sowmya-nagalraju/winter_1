@@ -4,26 +4,33 @@ import {Button} from '@/components/ui/button'
 import Count from './hooks/Count'
 import Register from './hooks/Register'
 import Users from './hooks/Users'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Service from './pages/Service'
+import Contact from './pages/Contact'
+import Navbar from './components/Navbar'
+import Products from './pages/Products'
+import ProductDetails from './pages/ProductDetails'
+
 const App = () => {
   let name = "test"
   return (
     <>
-        <div classname="p1-96">App</div>
-        <Register/>
-        <Count/>
-        <Button variant="destructive">Delete</Button>
-        <Button variant="outline">outline</Button>
-        <Button variant="secondary">secondary</Button>
-        <Button variant="ghost">ghost</Button>
-        <div classname="flex h-96 justify around items-center bg-emerald-6npx sha00">
-          <h3>1</h3>
-          <h3>2</h3>
-        <h3>3</h3>
-        </div>
-        <h1>This is {name}</h1>
-        <Users/>
+        <Navbar/>
+        <Routes>
+          <Route path="/" Component={Home}/>
+          <Route path="/about" Component={About}/>
+          <Route path="/service" Component={Service}/>
+          <Route path="/contact" Component={Contact}/>
+          <Route path="/products" Component={Products}/>
+          <Route path="/productDetails/:id" Component={ProductDetails}/>
+        </Routes>
 
-        <Students name="user" age={20}/>
+       {/*} <div classname="p1-96">App</div> */}
+        
+        
+        
     </>
    
   )
