@@ -4,7 +4,7 @@ import Child from './Child'
 const Parent = () => {
   return (
     <div>
-       < Child/>//cd❤️❤️❤️❤️❤️❤️
+       < Child/>
     </div>
   )
 }
